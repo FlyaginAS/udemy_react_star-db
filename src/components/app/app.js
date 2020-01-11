@@ -10,7 +10,7 @@ import './app.css';
 export  default  class App extends React.Component{
     state= {
        showRandomPlanet: true,
-       selectedPerson: null,
+       selectedPerson: 5,
     };
     onPersonSelected = (id)=>{
        this.setState({
