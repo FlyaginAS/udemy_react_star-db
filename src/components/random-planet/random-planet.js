@@ -28,6 +28,7 @@ export default class RandomPlanet extends Component {
             .then(this.onPlanetLoaded);
     }
 
+
     render() {
 
         const { planet: { id, name, population,
