@@ -25,6 +25,7 @@ const  PersonDetails = ({itemId})=>{
         </ItemDetails>
     );
 };
+
 const PlanetDetails = ({itemId})=>{
     return (
         <ItemDetails
