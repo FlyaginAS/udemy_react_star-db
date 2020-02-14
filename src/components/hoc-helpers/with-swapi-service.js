@@ -1,15 +1,16 @@
 import  React, {Component} from 'react';
 import {SwapiServiceConsumer} from "../swapi-service-context";
 
-const  withSwapiService = (View)=>{
+const  withSwapiService = (Wrapped, mapMethodsToProps)=>{
     return class extends Component {
         render(){
             return (
                 <SwapiServiceConsumer>
                     {
                         (swapiService)=>{
+                            const serviceProps=mapMethodsToProps(swapiService);
                             return (
-                                <View {...this.props} swapiService={swapiService}/>
+                                <Wrapped {...this.props}  {...serviceProps}/>
                             );
                         }
                     }
